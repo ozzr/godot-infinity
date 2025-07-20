@@ -2273,6 +2273,7 @@ void RenderingServer::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("texture_create_from_native_handle", "type", "format", "native_handle", "width", "height", "depth", "layers", "layered_type"), &RenderingServer::texture_create_from_native_handle, DEFVAL(1), DEFVAL(TEXTURE_LAYERED_2D_ARRAY));
 
 	ClassDB::bind_method(D_METHOD("texture_2d_update", "texture", "image", "layer"), &RenderingServer::texture_2d_update);
+	ClassDB::bind_method(D_METHOD("texture_2d_update_partial", "texture", "data", "dst_pos", "dst_mipmap", "layer"), &RenderingServer::texture_2d_update_partial, DEFVAL(0), DEFVAL(0));
 	ClassDB::bind_method(D_METHOD("texture_3d_update", "texture", "data"), &RenderingServer::_texture_3d_update);
 	ClassDB::bind_method(D_METHOD("texture_proxy_update", "texture", "proxy_to"), &RenderingServer::texture_proxy_update);
 
