@@ -623,7 +623,9 @@ void main() {
 	highp mat3 modelview_normal = mat3(scene_data.view_matrix) * model_normal_matrix;
 
 	float point_size = 1.0;
+#ifdef TERRAIN_ENABLED
 
+#endif // TERRAIN_ENABLED
 	{
 #CODE : VERTEX
 	}
